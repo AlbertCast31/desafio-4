@@ -36,7 +36,8 @@ function verificarNumero(){
         intentos--;
         if (intentos > 0){
             let intentoTexto= intentos ===1 ? "intento" : "intentos"; // cuando ya queda 1 intento lo definimos a singular
-            mensaje.textContent =`Incorrecto. Te quedan ${intentos} ${intentoTexto}.`;
+            let mensajeTexto=intentos=== 1 ? "Te queda" : "Te quedan";
+            mensaje.textContent =`Incorrecto.  ${mensajeTexto}  ${intentos} ${intentoTexto}.`;
         } else {
             mensaje.textContent =`Perdiste. El número era ${numeroAleatorio}.`;
             setTimeout(reiniciarJuego, 3000);
